@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+          # look at the users folder - registrations controller before looking at devise - this is how added first name and last name to the signup
+  devise_for :users, :controllers => {:registrations => "user/registrations"}
   get 'welcome/index'
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
