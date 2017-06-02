@@ -9,6 +9,9 @@
     
 }
 
+.navbar {
+    margin-bottom: 0 !Important;
+}
 .logout {
     padding-left: 0;
     
@@ -27,4 +30,28 @@
     .btn-danger:hover {
         background-color: darken(#d9534f, 20%) !Important;
     }
+}
+
+/* HOMEPAGE  */
+
+.jumbotron {
+    background-image: url("rink-trade-banner-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    text-align: center;
+}
+
+/* FONT STYLES  */
+
+.logo-header {
+    font-size: 50px;
+    color: #fff !important;
+    font-weight: 300;
+}
+
+.slogan {
+    font-size: 20px;
+    color: #fff !important;
+    font-weight: 300;
 }
