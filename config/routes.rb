@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
           # look at the users folder - registrations controller before looking at devise - this is how added first name and last name to the signup
   devise_for :users, :controllers => {:registrations => "user/registrations"}
+  
+  #adding friends
+  resources :users, only: [:show]
+  resources :friendships
+  
   get 'welcome/index'
   root 'welcome#index'
   
   get 'signup', to: 'users#new'
   
   get "my_friends", to: "users#my_friends"
+  
+  get 'search_friends', to: "users#search"
+  #creates association and adds friend
+  post 'add_friend', to: "users#add_friend"
   
   
   # The priority is based upon order of creation: first created -> highest priority.
