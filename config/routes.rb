@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   root 'welcome#index'
   
   get 'signup', to: 'users#new'
+  
+  get "my_friends", to: "users#my_friends"
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
